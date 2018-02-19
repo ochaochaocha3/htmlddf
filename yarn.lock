@@ -1115,7 +1115,7 @@ dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
 
-ddf@>0.5.6:
+ddf@^0.5.6:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/ddf/-/ddf-0.5.6.tgz#c3aa709499e2a9f0f6dd8d9912ded2b474622f63"
   dependencies:

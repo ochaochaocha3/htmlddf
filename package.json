@@ -4,7 +4,7 @@
   "version": "0.1.4",
   "author": "kitt @ttikitt <yosshi1123@gmail.com>",
   "dependencies": {
-    "ddf": ">0.5.6",
+    "ddf": "^0.5.6",
     "minami": "^1.2.3",
     "msgpack-lite": "^0.1.26",
     "store": "^2.0.12"
