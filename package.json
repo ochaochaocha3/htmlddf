@@ -17,6 +17,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-watchify": "^0.7.0",
+    "http-server": "^0.11.1",
     "jsdoc": "^3.5.5",
     "minami": "^1.2.3",
     "npm-run-all": "^4.1.2",
@@ -38,8 +39,10 @@
     "build": "npm-run-all -p build:*",
     "build:css": "postcss src/scss/style.scss -d build/css --ext css",
     "build:html": "pug ./src/pug/index.pug -P -o ./build",
+    "build:js": "browserify src/js/index.js -d --outfile build/js/index.js",
     "build:local": "cpx 'local/**' build",
     "build:vender": "cpx 'src/vender/**' build",
+    "serve": "http-server build -o",
     "clean": "del build/**",
     "doc:ddf": "jsdoc -c .jsdoc.json",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,3 +1,4 @@
+ddf = require('../module/index');
 ddf.cmd = {};
 chatlog = [];
 
