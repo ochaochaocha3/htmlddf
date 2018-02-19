@@ -11,15 +11,17 @@
   },
   "devDependencies": {
     "browserify": "^14.4.0",
-    "del": "^3.0.0",
+    "cpx": "^1.5.0",
+    "del-cli": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-watchify": "^0.7.0",
+    "jsdoc": "^3.5.5",
+    "pug-cli": "^1.0.0-alpha6",
     "uglifyify": "^4.0.5",
     "vinyl-buffer": "^1.0.0",
     "watchify": "^3.9.0"
@@ -31,6 +33,11 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
+    "build:vender": "cpx 'src/vender/**' build",
+    "build:local": "cpx 'local/**' build",
+    "build:html": "pug ./src/pug/index.pug -P -o ./build",
+    "clean": "del build/**/* !build/js !build/js/lib",
+    "doc:ddf": "jsdoc -c .jsdoc.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
