@@ -12,11 +12,6 @@
     "cpx": "^1.5.0",
     "cssnano": "^3.10.0",
     "del-cli": "^1.1.0",
-    "gulp": "^3.9.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-watchify": "^0.7.0",
     "http-server": "^0.11.1",
     "jsdoc": "^3.5.5",
     "minami": "^1.2.3",
@@ -26,7 +21,6 @@
     "postcss-node-sass": "^2.1.4",
     "pug-cli": "^1.0.0-alpha6",
     "uglifyify": "^4.0.5",
-    "vinyl-buffer": "^1.0.0",
     "watchify": "^3.9.0"
   },
   "directories": {
@@ -42,9 +36,15 @@
     "build:js": "browserify src/js/index.js -d --outfile build/js/index.js",
     "build:local": "cpx 'local/**' build",
     "build:vender": "cpx 'src/vender/**' build",
-    "serve": "http-server build -o",
     "clean": "del build/**",
     "doc:ddf": "jsdoc -c .jsdoc.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "http-server build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-run-all -p watch:*",
+    "watch:css": "postcss src/scss/style.scss -w -d build/css --ext css",
+    "watch:html": "pug ./src/pug/index.pug -P -o ./build -w",
+    "watch:js": "watchify src/js/index.js -d --outfile build/js/index.js",
+    "watch:local": "cpx 'local/**' build -w",
+    "watch:vender": "cpx 'src/vender/**' build -w"
   }
 }
