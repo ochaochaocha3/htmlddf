@@ -21,6 +21,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-watchify": "^0.7.0",
     "jsdoc": "^3.5.5",
+    "npm-run-all": "^4.1.2",
     "pug-cli": "^1.0.0-alpha6",
     "uglifyify": "^4.0.5",
     "vinyl-buffer": "^1.0.0",
@@ -33,10 +34,11 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
-    "build:vender": "cpx 'src/vender/**' build",
-    "build:local": "cpx 'local/**' build",
+    "build": "npm-run-all -p build:*",
     "build:html": "pug ./src/pug/index.pug -P -o ./build",
-    "clean": "del build/**/* !build/js !build/js/lib",
+    "build:local": "cpx 'local/**' build",
+    "build:vender": "cpx 'src/vender/**' build",
+    "clean": "del build/**",
     "doc:ddf": "jsdoc -c .jsdoc.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   }

@@ -18,7 +18,6 @@ gulp.task("release", [
 ]);
 
 gulp.task("default", ["build"]);
-gulp.task("build", ["build:pug", "build:scss", "build:asset"]);
 
 gulp.task("build:scss", function() {
   gulp
