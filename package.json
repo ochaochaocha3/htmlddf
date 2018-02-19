@@ -5,7 +5,6 @@
   "author": "kitt @ttikitt <yosshi1123@gmail.com>",
   "dependencies": {
     "ddf": "^0.5.6",
-    "minami": "^1.2.3",
     "msgpack-lite": "^0.1.26",
     "store": "^2.0.12"
   },
@@ -21,6 +20,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-watchify": "^0.7.0",
     "jsdoc": "^3.5.5",
+    "minami": "^1.2.3",
     "npm-run-all": "^4.1.2",
     "pug-cli": "^1.0.0-alpha6",
     "uglifyify": "^4.0.5",
